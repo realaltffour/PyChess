@@ -1,5 +1,5 @@
 import Board
-import piece
+import Piece
 import pieces
 import os
 import sys
