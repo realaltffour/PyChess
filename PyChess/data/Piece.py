@@ -8,9 +8,11 @@ PCE_ID_PAWN = 6
 
 class Piece:
     m_ID = -1
+    m_WhitePCE = True
 
-    def __init__(self, id):
-       self.m_ID =id
+    def __init__(self, id, iswhite):
+       self.m_ID = id
+       self.m_WhitePCE = iswhite
     
     def name():
         if self.m_ID == PCE_ID_KING: return 'K'
