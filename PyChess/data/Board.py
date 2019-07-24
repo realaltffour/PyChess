@@ -20,7 +20,23 @@ class Board:
         self.setLoc(7,0, PCE_ID_ROOK)
         
         # set-up front row, white's pieces.
+        for i in range(self.m_Board_W)
+            self.setLoc(i, 1, PCE_ID_PAWN)
+
+        # set-up back row, black's pieces.
+        self.setLoc(0,8, PCE_ID_ROOK)
+        self.setLoc(1,8, PCE_ID_KNIGHT)
+        self.setLoc(2,8, PCE_ID_BISHOP)
+        self.setLoc(4,8, PCE_ID_KING)
+        self.setLoc(3,8, PCE_ID_QUEEN)
+        self.setLoc(5,8, PCE_ID_BISHOP)
+        self.setLoc(6,8, PCE_ID_KNIGHT)
+        self.setLoc(7,8, PCE_ID_ROOK)
         
+        # set-up front row, black's pieces.
+        for i in range(self.m_Board_W)
+            self.setLoc(i, 7, PCE_ID_PAWN)
+
 
     def getLoc(col, row):
         return self.m_Board[(self.m_Board_W*row)+col]
