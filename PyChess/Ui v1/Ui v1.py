@@ -1,3 +1,6 @@
+import Board
+import piece
+import pieces
 import os
 import sys
 
