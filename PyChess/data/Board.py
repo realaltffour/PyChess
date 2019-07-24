@@ -3,9 +3,10 @@ import Piece
 
 class Board:
     m_WhiteTurn = True
-    m_Board = [Piece] * (m_Board_W * m_Board_H)
     m_Board_W = 8
     m_Board_H = 8
+    m_Board = [Piece] * (m_Board_W * m_Board_H)
+
 
     def __init__(self):
         # set-up back row, white's pieces.
@@ -14,10 +15,15 @@ class Board:
         self.setLoc(2,0, PCE_ID_BISHOP)
         self.setLoc(3,0, PCE_ID_QUEEN)
         self.setLoc(4,0, PCE_ID_KING)
-        self.setLoc()
+        self.setLoc(5,0, PCE_ID_BISHOP)
+        self.setLoc(6,0, PCE_ID_KNIGHT)
+        self.setLoc(7,0, PCE_ID_ROOK)
+        
+        # set-up front row, white's pieces.
+        
 
     def getLoc(col, row):
         return self.m_Board[(self.m_Board_W*row)+col]
 
-    def setLoc(col, row, pce_id):
-        self.m_Board[(self.m_Board_W*row)+col] = Piece(pce_id)
+    def setLoc(col, row, pce_id, iswhite):
+        self.m_Board[(self.m_Board_W*row)+col] = Piece(pce_id, iswhite)
