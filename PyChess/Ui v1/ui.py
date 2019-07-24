@@ -4,7 +4,7 @@ import pieces
 import os
 import sys
 
-
+sys.path.insert(0, '../data/')
 # function to clear the console after user choose
 def cls():
     os.system('Cls ' if os.name =='nt' else 'clear')
